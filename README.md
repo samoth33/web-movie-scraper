@@ -1,14 +1,15 @@
 # web-movie-scraper
 
-# Salvatore Cantoro
-# Pasquale Loizzo
-# Filippo Prencipe
-# Giovanni Lombardi
+#Dati tmdb
+Username: iFicons
+Password: adriana2017
+themobiedb.org
 
-prova
+#api token
+Funzione per la ricerca delle APi: 
+SEARCH/get search movies
 
-Filippo prencipeCiao
+API TOKEN 8d19117f52af20f7e348521d72239732
 
-Salvatore Cantoro
-
-buongiorno
+Esempio query per ricerca film
+https://api.themoviedb.org/3/search/movie?api_key=8d19117f52af20f7e348521d72239732&query=Jack+Reacher
