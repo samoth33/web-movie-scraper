@@ -39,7 +39,7 @@ export class SearchPageComponent implements OnInit {
               if(film.poster_path)
                 film.poster_path = this.createImgPath(film.poster_path);
               else
-                film.poster_path = "http://via.placeholder.com/154x231?text=Not+Found"
+                film.poster_path = "http://via.placeholder.com/92x137?text=Not+Found"
             }
         } , (error) => {
           console.error(error);
