@@ -1,12 +1,29 @@
-<h1>Web Movie DB Search Page</h1>
-<div class="form-group">
-    <form>
-        <input class="form-control" type="search" [(ngModel)]="title" placeholder="Insert title here" [ngModelOptions]="{standalone: true}">
-        <input type="submit" class="btn btn-sm btn-primary" (click)="getResult()">
-    </form>
-</div>
-
-<ul>
-    <li *ngFor="let film of listaFilm;" > {{film.title}} <img src={{film.poster_path}}></li>
-    <li *ngIf="listaFilm.length == 0" >Nessun risultato trovato</li>
-</ul>
+<div class="container">
+        
+    <h1>Search Results</h1>
+    <h2 class="lead"><strong class="text-danger">{{listaFilm.length}}</strong> results were found for the search for <strong class="text-danger">{{title}}</strong></h2>								
+        <form>
+            <input class="form-control" type="search" [(ngModel)]="title" placeholder="Insert title here" [ngModelOptions]="{standalone: true}">
+            <input type="submit" class="btn btn-sm btn-primary" (click)="getResult()">
+            </form>
+            <div class="row"  *ngFor="let film of listaFilm;">
+            <section class="col-xs-12 col-sm-6 col-md-12" align="left">
+                <article class="search-result row">
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <a href="#" title="Lorem ipsum" class="thumbnail"><img src={{film.poster_path}} alt={{film.title}} /></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-2">
+                        <ul class="meta-search">
+                            <li><i class="glyphicon glyphicon-calendar"></i> <span>{{film.release_date}}</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+                        <h3><a href="#" title="">{{film.title}}</a></h3>
+                        <p>{{film.overview}}</p>						
+                        <span class="plus"><a href="#" title="Lorem ipsum"><i class="glyphicon glyphicon-plus"></i></a></span>
+                    </div>
+                    <span class="clearfix borda"></span>
+                </article>
+            </section>
+        </div>
+        </div>

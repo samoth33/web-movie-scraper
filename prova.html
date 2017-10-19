@@ -1,0 +1,33 @@
+<div class="container">
+
+    <hgroup class="mb20">
+		<h1>Search Results</h1>
+		<h2 class="lead"><strong class="text-danger">listaFilm.length</strong> results were found for the search for <strong class="text-danger">{{title}}</strong></h2>								
+	</hgroup>
+
+    <section class="col-xs-12 col-sm-6 col-md-12">
+		<article class="search-result row" *ngFor="let film of listaFilm;">
+			<div class="col-xs-12 col-sm-12 col-md-3">
+				<a href="#" title="Lorem ipsum" class="thumbnail"><img src={{film.poster_path}} alt={{film.title}} /></a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-2">
+				<ul class="meta-search">
+					<li><i class="glyphicon glyphicon-calendar"></i> <span>{{film.release_date}}</span></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+				<h3><a href="#" title="">{{film.title}}</a></h3>
+				<p>{{title.overview}}</p>						
+                <span class="plus"><a href="#" title="Lorem ipsum"><i class="glyphicon glyphicon-plus"></i></a></span>
+			</div>
+			<span class="clearfix borda"></span>
+		</article>
+	</section>
+</div>
+
+
+<form>
+        <input class="form-control" type="search" [(ngModel)]="title" placeholder="Insert title here" [ngModelOptions]="{standalone: true}">
+        <input type="submit" class="btn btn-sm btn-primary" (click)="getResult()">
+    </form>
+</div>

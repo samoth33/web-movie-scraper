@@ -50,7 +50,7 @@ export class SearchPageComponent implements OnInit {
   public createImgPath(poster:string): string
   {
     let base_url = "https://image.tmdb.org/t/p/";
-    let width = "w154";
+    let width = "w92";
     console.log(base_url+width+poster);
     return base_url+width+poster;
   }
