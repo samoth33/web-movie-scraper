@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+body
+{
+    text-align: center;
+    background-image: url("https://highspringsplayhouse.com/welcome/wp-content/uploads/2016/01/red-curtains.jpg")
+}
