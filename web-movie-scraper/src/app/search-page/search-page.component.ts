@@ -10,7 +10,6 @@ export class SearchPageComponent implements OnInit {
 
   title: string;
   listaFilm : Array<any>=[];
-  path : Array<string> = [];
   
   constructor(public searchService : SearchPageService)
   { 
@@ -33,25 +32,18 @@ export class SearchPageComponent implements OnInit {
   {
       this.searchService.searchFilm(this.createURL()).subscribe(
         (data) => {
+          console.log("DATA::::",data);
             this.listaFilm = data.results;
-            for(let film of this.listaFilm)
-            {
-              if(film.poster_path)
-                film.poster_path = this.createImgPath(film.poster_path);
-              else
-                film.poster_path = "http://via.placeholder.com/154x231?text=Not+Found"
-            }
         } , (error) => {
           console.error(error);
         }
       );
+      console.log("LISTAFILM::::" , this.listaFilm);
   }
 
-  public createImgPath(poster:string): string
+  public stampaLista()
   {
-    let base_url = "https://image.tmdb.org/t/p/";
-    let width = "w154";
-    console.log(base_url+width+poster);
-    return base_url+width+poster;
+    console.log(this.listaFilm);
   }
+
 }
