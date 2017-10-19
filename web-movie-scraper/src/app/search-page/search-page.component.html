@@ -2,7 +2,8 @@
 <form>
     <input type="search" [(ngModel)]="title" placeholder="pasqual u trmoun" [ngModelOptions]="{standalone: true}">
     <button (click)="getResult()">capokkj</button>
+    <button (click)="stampaLista()">zinzl</button>
 </form>
 <ul>
-    <li *ngFor="let film of listaFilm;" > {{film}}</li>
+    <li *ngFor="let film of listaFilm;" > {{film.title}}</li>
 </ul>

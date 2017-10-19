@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchPageService } from '../search-page-service/search-page.service';
-import { Film } from '../film';
 
 @Component({
   selector: 'app-search-page',
@@ -10,7 +9,7 @@ import { Film } from '../film';
 export class SearchPageComponent implements OnInit {
 
   title: string;
-  listaFilm : Array<any>;
+  listaFilm : Array<any>=[];
   
   constructor(public searchService : SearchPageService)
   { 
@@ -34,13 +33,17 @@ export class SearchPageComponent implements OnInit {
       this.searchService.searchFilm(this.createURL()).subscribe(
         (data) => {
           console.log("DATA::::",data);
-            this.listaFilm = data;
+            this.listaFilm = data.results;
         } , (error) => {
           console.error(error);
         }
       );
+      console.log("LISTAFILM::::" , this.listaFilm);
+  }
 
-     // console.log(this.listaFilm);
+  public stampaLista()
+  {
+    console.log(this.listaFilm);
   }
 
 }
