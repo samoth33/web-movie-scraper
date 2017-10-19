@@ -1,8 +1,11 @@
 <h1>Web Movie DB Search Page</h1>
-<form>
-    <input type="search" [(ngModel)]="title" placeholder="pasqual u trmoun" [ngModelOptions]="{standalone: true}">
-    <button (click)="getResult()">Search</button>
-</form>
+<div class="form-group">
+    <form>
+        <input class="form-control" type="search" [(ngModel)]="title" placeholder="Insert title here" [ngModelOptions]="{standalone: true}">
+        <input type="submit" class="btn btn-sm btn-primary" (click)="getResult()">
+    </form>
+</div>
+
 <ul>
     <li *ngFor="let film of listaFilm;" > {{film.title}} <img src={{film.poster_path}}></li>
     <li *ngIf="listaFilm.length == 0" >Nessun risultato trovato</li>
