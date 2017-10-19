@@ -1,10 +1,10 @@
 export class Film {
 
-    private id : number;
-    private title : string;
-    private overview : string;
-    private releaseDate : string;
-    private image : string;
+    public id : number;
+    public title : string;
+    public overview : string;
+    public releaseDate : string;
+    public image : string;
     
     constructor ( id?, title?, overview?, releaseDate?, image? )
     {

@@ -10,13 +10,9 @@ export class SearchPageService {
 
   constructor(private http: HttpClient)  {  }
 
-  searchFilm(url : string)
+  searchFilm(url : string) : any
   {
-    this.http.get(url).subscribe(
-      data => {
-          this.listaFilm.push(new Film(data));  //COMM S FSC!!!!
-      }
-    )
+    return this.http.get(url);
   }
 
 }
