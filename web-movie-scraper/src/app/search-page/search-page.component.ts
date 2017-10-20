@@ -11,6 +11,7 @@ export class SearchPageComponent implements OnInit {
   title: string;
   listaFilm : Array<any>=[];
   path : Array<string> = [];
+  lastKeypress : number  = 0;
   
   constructor(public searchService : SearchPageService)
   { 
@@ -18,6 +19,14 @@ export class SearchPageComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+  public searchBar($event)
+  {
+    if($event.timeStamp - this.lastKeypress > 100)
+    {
+      this.getResult();
+    }
+    this.lastKeypress = $event.timeStamp;
   }
 
   public createURL() : string
