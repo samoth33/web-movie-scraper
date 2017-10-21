@@ -1,3 +1,4 @@
+//primo test di prova
 import { TestBed } from "@angular/core/testing";
 import { AppComponent } from "../app.component";
 import { SearchPageComponent } from "../search-page/search-page.component";
@@ -26,8 +27,4 @@ beforeEach(() => {
 
 describe('1st tests', () => {
     it('true is true', () => expect(true).toBe(true));
-  });
-
-  describe('createImgPath',()=>{
-    it('parameter is null',()=> expect(this.SearchPageComponent.createImgPath("").toBe("http://via.placeholder.com/92x137?text=Not+Found")));
   });

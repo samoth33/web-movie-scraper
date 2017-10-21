@@ -12,7 +12,7 @@
             </span>
         </div>
     </div>				
-    <h2 class="lead" *ngIf="listaFilm != 0"><strong class="text-danger">{{listaFilm.length}}</strong> results were found for the search for <strong class="text-danger">{{title}}</strong></h2>
+    <h2 class="lead" *ngIf="title.length!=0"><strong class="text-danger">{{listaFilm.length}}</strong> results were found for the search for <strong class="text-danger">{{title}}</strong></h2>
     <div class="row borderedrow"  align="center" *ngFor="let film of listaFilm;">
         <section class="col-xs-12 col-sm-6 col-md-12" align="center">
             <article class="search-result row">
