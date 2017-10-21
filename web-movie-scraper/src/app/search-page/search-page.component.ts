@@ -58,6 +58,10 @@ export class SearchPageComponent implements OnInit {
 
   public createImgPath(poster:string): string
   {
+    if(poster==null || poster=="")
+    {
+      return "http://via.placeholder.com/92x137?text=Not+Found" 
+    }
     let base_url = "https://image.tmdb.org/t/p/";
     let width = "w92";
     console.log(base_url+width+poster);
