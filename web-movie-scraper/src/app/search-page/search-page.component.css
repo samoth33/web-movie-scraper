@@ -12,7 +12,6 @@
     padding-right: 4px \9;
     padding-left: 3px;
     padding-left: 4px \9;
-    /* IE7-8 doesn't have border-radius, so don't indent the padding */
 
     margin-bottom: 0;
     -webkit-border-radius: 3px;
@@ -23,12 +22,10 @@
 #custom-search-input button {
     border: 0;
     background: none;
-    /** belows styles are working good */
     padding: 2px 5px;
     margin-top: 2px;
     position: relative;
     left: -28px;
-    /* IE7-8 doesn't have border-radius, so don't indent the padding */
     margin-bottom: 0;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -39,27 +36,77 @@
 .search-query:focus + button {
     z-index: 3;   
 }
-.container { margin-top: 20px; }
-.mb20 { margin-bottom: 20px; }
-.search-result .thumbnail { border-radius: 0 !important; border:none !important; margin-bottom: 0px !important; margin-top: 2px !important; }
-.search-result:first-child { margin-top: 0 !important; }
-.search-result { margin-top: 20px; }
-.search-result .col-md-2 { border-right: 1px dotted #ccc; min-height: 140px; }
-.search-result ul { padding-left: 0 !important; list-style: none;  }
-.search-result ul li { font: 400 normal .85em "Roboto",Arial,Verdana,sans-serif;  line-height: 30px; }
-.search-result ul li i { padding-right: 5px; }
-.search-result .col-md-7 { position: relative; }
-.search-result h3 { font: 500 normal 1.375em "Roboto",Arial,Verdana,sans-serif; margin-top: 7px !important; margin-bottom: 10px !important; }
-.search-result h3 > a, .search-result i { color: #248dc1 !important; }
-.search-result p { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; } 
-.search-result span.plus { position: absolute; right: 0; top: 126px; }
-.search-result span.plus a { background-color: #248dc1; padding: 5px 5px 3px 5px; }
-.search-result span.plus a:hover { background-color: #414141; }
-.search-result span.plus a i { color: #fff !important; }
-.search-result span.border { display: block; width: 97%; margin: 0 15px; border-bottom: 1px dotted #ccc; }
-.col-sm-6 {  width: 100% !important; }
-.borderedrow
-{
+.container { 
+    margin-top: 20px; 
+}
+.mb20 { 
+    margin-bottom: 20px; 
+}
+.search-result .thumbnail { 
+    border-radius: 0 !important; 
+    border:none !important; 
+    margin-bottom: 0px !important; 
+    margin-top: 2px !important;
+    background: none;
+}
+.search-result:first-child { 
+    margin-top: 0 !important; 
+}
+.search-result { 
+    margin-top: 20px; 
+}
+.search-result .col-md-2 { 
+    border-right: 1px dotted #ccc; 
+    min-height: 140px; 
+}
+.search-result ul { 
+    padding-left: 0 !important; 
+    list-style: none;  
+}
+.search-result ul li { 
+    font: 400 normal .85em "Roboto",Arial,Verdana,sans-serif;  
+    line-height: 30px; 
+}
+.search-result ul li i { 
+    padding-right: 5px; 
+}
+.search-result .col-md-7 { 
+    position: relative; 
+}
+.search-result h3 { 
+    font: 500 normal 1.375em "Roboto",Arial,Verdana,sans-serif; 
+    margin-top: 7px !important; 
+    margin-bottom: 10px !important; 
+}
+.search-result h3 > a, .search-result i { 
+    color: #248dc1 !important; 
+}
+.search-result p { 
+    font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; 
+} 
+.search-result span.plus { 
+    position: absolute; right: 0; top: 126px; 
+}
+.search-result span.plus a { 
+    background-color: #248dc1; 
+    padding: 5px 5px 3px 5px; 
+}
+.search-result span.plus a:hover { 
+    background-color: #414141; 
+}
+.search-result span.plus a i { 
+    color: #fff !important; 
+}
+.search-result span.border { 
+    display: block; 
+    width: 97%; 
+    margin: 0 15px; 
+    border-bottom: 1px dotted #ccc; 
+}
+.col-sm-6 {  
+    width: 100% !important; 
+}
+.borderedrow{
     text-align: center;
     border: 3px solid grey;
     margin-top: 15px;
