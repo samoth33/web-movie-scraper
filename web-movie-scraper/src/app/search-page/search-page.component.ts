@@ -49,6 +49,11 @@ export class SearchPageComponent implements OnInit {
                 film.poster_path = this.createImgPath(film.poster_path);
               else
                 film.poster_path = "http://via.placeholder.com/92x137?text=Not+Found"
+                
+              if(film.backdrop_path)
+                film.backdrop_path = this.createBkdrpPath(film.backdrop_path);
+              else
+                film.backdrop_path = "http://via.placeholder.com/300x169?text=Not+Found"
             }
         } , (error) => {
           console.error(error);
@@ -66,5 +71,17 @@ export class SearchPageComponent implements OnInit {
     let width = "w92";
     console.log(base_url+width+poster);
     return base_url+width+poster;
+  }
+
+  public createBkdrpPath(backdrop:string): string
+  {
+    if(backdrop==null || backdrop=="")
+    {
+      return "http://via.placeholder.com/300x169?text=Not+Found" 
+    }
+    let base_url = "https://image.tmdb.org/t/p/";
+    let width = "w300";
+    console.log(base_url+width+backdrop);
+    return base_url+width+backdrop;
   }
 }

@@ -16,12 +16,21 @@
     <div class="row borderedrow"  align="center" *ngFor="let film of listaFilm;">
         <section class="col-xs-12 col-sm-6 col-md-12" align="center">
             <article class="search-result row">
-                <div class="col-xs-12 col-sm-12 col-md-3">
-                    <a href="#" title="Lorem ipsum" class="thumbnail"><img src={{film.poster_path}} alt={{film.title}} /></a>
+                <div class="col-xs-12 col-sm-12 col-md-3 hidden-xs hidden-sm ">
+                    <a href="#" title="Poster path" class="thumbnail"><img src={{film.poster_path}} alt={{film.title}} /></a>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 hidden-lg hidden-md">
+                    <a href="#" title="Backdrop path" class="thumbnail"><img src={{film.backdrop_path}} alt={{film.title}} /></a>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-2">
                     <ul class="meta-search">
                         <li><i class="glyphicon glyphicon-calendar"></i> <span>{{film.release_date}}</span></li>
+                    </ul>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-star-empty"></i> <span>{{film.vote_average}}</span></li>
+                    </ul>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-thumbs-up"></i> <span>{{film.popularity}}</span></li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
